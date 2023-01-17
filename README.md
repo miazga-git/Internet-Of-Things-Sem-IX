@@ -6,6 +6,7 @@ Polecenie:
 SenseHat
 
 Polecenie: 
+
 ![image](https://user-images.githubusercontent.com/82395921/212981196-380307cc-7e68-4e20-8880-21410bff2576.png)
 
 Docker Project
@@ -16,9 +17,11 @@ Polecenie:
 AWS + Linear Regression
 
 Polecenie: 
+
 ![image](https://user-images.githubusercontent.com/82395921/212981234-bdfc055f-139b-4dc3-8012-4717943eb875.png)
 
 Useful commands:
+
  pip install uvicorn
  
  pip3 install fastapi
