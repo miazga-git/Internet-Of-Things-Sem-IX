@@ -1,0 +1,69 @@
+version: '3.9'
+services:
+
+  fastapi:
+    build:
+      context: ./fastapi
+      dockerfile: Dockerfile
+    ports:
+      - 8091:8091
+    networks:
+      - default
+  mosquitto:
+    image: eclipse-mosquitto
+    container_name: mosquitto
+    restart: always
+    ports:
+      - 1883:1883
+    volumes:
+      - ./conf:/mosquitto/config
+      - ./data:/mosquitto/data
+      - ./log:/mosquitto/log
+  mqtt_sub_pub:
+    build:
+      context: ./mqttSubPub
+      dockerfile: Dockerfile
+    restart: always
+    networks:
+      - default
+    depends_on:
+      - "mosquitto"
+      - "fastapi"
+    environment:
+      MQTT_HOST: mosquitto
+      MQTT_PORT: 1883
+      API_HOST: fastapi
+      API_PORT: 8091
+  mqtt_init:
+    build:
+      context: ./mqttInit
+      dockerfile: Dockerfile
+    restart: always
+    networks:
+      - default
+    depends_on:
+      - "mosquitto"
+      - "fastapi"
+    environment:
+      MQTT_HOST: mosquitto
+      MQTT_PORT: 1883
+      API_HOST: fastapi
+      API_PORT: 8091
+  mqtt_sub:
+    build:
+      context: ./mqttSub
+      dockerfile: Dockerfile
+    restart: always
+    networks:
+      - default
+    depends_on:
+      - "mosquitto"
+      - "fastapi"
+    environment:
+      MQTT_HOST: mosquitto
+      MQTT_PORT: 1883
+      API_HOST: fastapi
+      API_PORT: 8091
+networks:
+    default:
+        driver: bridge
