@@ -14,20 +14,28 @@ Implement the REST API service using fast-api and communicate with the API from 
   
 ## SenseHat
 
-Polecenie: 
+<b>Tasks:</b> 
 
 ![image](https://user-images.githubusercontent.com/82395921/212981196-380307cc-7e68-4e20-8880-21410bff2576.png)
+<b>[English below]</b><br>
+Build an application that allows you to use Raspberry PI sensors and actuators
+Sensors (at least 4): Accelerometer, Gyroscope, Magnetometer/compass, Thermometer, Humidity sensor, Barometer, Joystick
+Actuators: LED display
 
 ## Docker Project
 
-Polecenie: 
+<b>Tasks:</b> 
+ 
 ![image](https://user-images.githubusercontent.com/82395921/212981060-102af3cc-43d1-4ad8-a780-a6c507cd050d.png)
+<b>[English below]</b><br>
 
 ## AWS + Linear Regression
 
-Polecenie: 
+<b>Tasks:</b> 
 
 ![image](https://user-images.githubusercontent.com/82395921/212981234-bdfc055f-139b-4dc3-8012-4717943eb875.png)
+<b>[English below]</b><br>
+
 
 ## Useful commands:
 ```console
