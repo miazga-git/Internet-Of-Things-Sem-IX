@@ -4,7 +4,14 @@
 
 <b>Tasks:</b> 
 ![image](https://user-images.githubusercontent.com/82395921/212981155-a09254c7-c3b2-467c-891e-cde548c468e7.png)
-<b>English below</b>
+<b>[English below]</b><br>
+Implement communication using the MQTT protocol, the Raspberry PI device should be both a client and a broker
+- At least 3 topics and different QoS
+- At least 2 subscriptions and 1 publication from paho-mqtt
+
+Implement the REST API service using fast-api and communicate with the API from the level of the client application
+  At least 3 services that download data and at least 2 that add/modify data - data stored in the file
+  
 ## SenseHat
 
 Polecenie: 
